@@ -1,4 +1,5 @@
 import Disc from "./Disc";
+import styles from "./Tower.module.css";
 
 const baseColor = "blue";
 const towerColor = "yellow";
@@ -14,18 +15,9 @@ const towerImage = `data:image/svg+xml,${encodeURIComponent(towerSVG)}`;
 
 export default function Tower({ discs }) {
 
-  const styles = {
-    backgroundImage: `url(${towerImage})`,
-    display: "flex",
-    flexDirection: "column-reverse",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    width: "90%",
-    paddingBottom: `${200 * .1}px`,
-  };
 
   return (
-    <section style={styles}>
+    <section className={styles.tower}>
       {discs.map((discImage, i) => <Disc key={i} discImage={discImage} />)}
     </section>
   );

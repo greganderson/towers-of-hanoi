@@ -1,0 +1,9 @@
+.tower {
+  background-image: url('../assets/tower.svg');
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
